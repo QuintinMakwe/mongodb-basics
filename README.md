@@ -10,6 +10,6 @@ Carried out the task as instructed. Herein are the screenshots requested
 
 ![Database Connected Successfully](dbConnected.png)
 
-### Screenshot validating that interns collection was saved successfully
+### Screenshot validating that interns collection was created successfully
 
 ![Image of interns created successfully](collectionCreated.png)
