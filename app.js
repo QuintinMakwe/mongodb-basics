@@ -22,13 +22,13 @@ MongoClient.connect(url, (err, client) => {
 
   createMovies(db);
 
-  // returnFirstDoc(db);
+  returnFirstDoc(db);
 
-  // returnRating7(db);
+  returnRating7(db);
 
-  // projectTitle(db);
+  projectTitle(db);
 
   updateMovie(db);
 
-  // client.close();
+  client.close();
 });
