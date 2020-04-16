@@ -1,6 +1,13 @@
 const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
-const createCollection = require("./collection");
+const { createInterns, createMovies } = require("./interns");
+const {
+  returnFirstDoc,
+  returnRating7,
+  projectTitle,
+} = require("./findInterns");
+
+const { updateMovie } = require("./updateInterns");
 
 const url = "mongodb://localhost:27017";
 
@@ -11,7 +18,17 @@ MongoClient.connect(url, (err, client) => {
 
   const db = client.db(dbName);
 
-  createCollection(db, () => {
-    client.close();
-  });
+  createInterns(db);
+
+  createMovies(db);
+
+  // returnFirstDoc(db);
+
+  // returnRating7(db);
+
+  // projectTitle(db);
+
+  updateMovie(db);
+
+  // client.close();
 });
